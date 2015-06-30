@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 静态添加Fragment示例-->
+    <fragment
+        android:id="@+id/id_fragment_title"
+        android:name="com.ls.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <!--<fragment-->
+    <!--android:name="com.ls.fragment.ContentFragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/fragment_title" />-->
+    <include
+        layout="@layout/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/id_ly_bottombar"/>
+
+    <FrameLayout
+        android:id="@+id/id_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@id/id_ly_bottombar"
+        android:layout_below="@id/id_fragment_title" />
+
+</RelativeLayout>
